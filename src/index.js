@@ -1,13 +1,12 @@
-import {initializeApp} from 'firebase/app'
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js" // uriktig adress
 import {
     getFirestore, collection,getDocs
-}from 'firebase/firestore'
+}from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js" //uriktig
 import{ 
     getAuth,
     signOut,
     signInWithEmailAndPassword
-}from 'firebase/auth'
-
+}from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js" // fikses
 const firebaseConfig = {
     apiKey: "AIzaSyA7hanPcjfkEjcCkAv7DQt1Fis5yinXK4o",
     authDomain: "kaentis.firebaseapp.com",
@@ -50,7 +49,12 @@ const firebaseConfig = {
         const password = loginForm.password.value
 
         signInWithEmailAndPassword(auth, email, password)
-        .then(console.log("yes"), enableAdmin())
+        .then((cred)=> {
+            console.log("user logged in", cred.user)
+        })
+        .catch((err) => {
+            console.log(err.message)
+        })
     })
 
     //Sign out
@@ -67,7 +71,7 @@ const firebaseConfig = {
     })
 
     function enableAdmin() {
-        console.log("yes")
+        // console.log("yes")
         loginForm.classList.add("hidden")
         console.log(loginForm)
     }
@@ -75,3 +79,5 @@ const firebaseConfig = {
     function disableAdmin(){
         loginForm.classList.remove("hidden")
     }
+
+console.log("test")
