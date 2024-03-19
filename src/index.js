@@ -1,12 +1,12 @@
-import {initializeApp} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js" // uriktig adress
+import {initializeApp} from 'firebase/app' // uriktig adress
 import {
     getFirestore, collection,getDocs
-}from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js" //uriktig
+}from 'firebase/firestore' //uriktig
 import{ 
     getAuth,
     signOut,
     signInWithEmailAndPassword
-}from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js" // fikses
+}from 'firebase/auth' // fikses
 const firebaseConfig = {
     apiKey: "AIzaSyA7hanPcjfkEjcCkAv7DQt1Fis5yinXK4o",
     authDomain: "kaentis.firebaseapp.com",
@@ -50,7 +50,7 @@ const firebaseConfig = {
 
         signInWithEmailAndPassword(auth, email, password)
         .then((cred)=> {
-            console.log("user logged in", cred.user)
+            console.log("user logged in", cred.user), enableAdmin();
         })
         .catch((err) => {
             console.log(err.message)
