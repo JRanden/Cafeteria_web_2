@@ -41,6 +41,8 @@ const firebaseConfig = {
 
     // Sign into 
     const loginForm = document.querySelector('.authForm')
+    const displayWrapper = document.getElementById("displayWrapper")
+    const loginWrapper = document.querySelector(".loginWrapper")
 
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -72,12 +74,16 @@ const firebaseConfig = {
 
     function enableAdmin() {
         // console.log("yes")
-        loginForm.classList.add("hidden")
+        loginWrapper.classList.add("hidden")
+        displayWrapper.classList.remove("hidden")
         console.log(loginForm)
     }
 
     function disableAdmin(){
-        loginForm.classList.remove("hidden")
+        loginWrapper.classList.remove("hidden")
+        displayWrapper.classList.add("hidden")
     }
+
+
 
 console.log("test")

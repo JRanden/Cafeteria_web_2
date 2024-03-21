@@ -1,6 +1,6 @@
 
 .hidden {
-    display: none;
+    display:none;
 }
 
 :root{
@@ -27,6 +27,10 @@ body{
     max-width: 20%;
     color: var(--main-1);
     font-size: 2em;
-    box-shadow: 1px 1px 1px 1px var(--main-2);
+    border: solid var(--main-2) 5px;
     padding: 25px 60px;
+}
+
+.displayWrapper{
+    color: var(--main-1);
 }
