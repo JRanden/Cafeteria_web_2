@@ -1,6 +1,6 @@
 import {initializeApp} from 'firebase/app'
 import {
-    getFirestore, collection,getDocs
+    getFirestore, collection,
 }from 'firebase/firestore'
 import{ 
     getAuth,
@@ -25,11 +25,6 @@ const firebaseConfig = {
   const db = getFirestore()
   const auth = getAuth()
   
-  // collection ref
-  const colRef = collection(db, 'Produkter')
-
-  // get data
-
     // Sign into 
     const loginForm = document.querySelector('.authForm')
 

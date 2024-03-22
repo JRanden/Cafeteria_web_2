@@ -68,7 +68,8 @@ const firebaseConfig = {
 // Write out all Data Menu
 const colRefConst = collection(db, 'Constant Products')
 const colRefVar = collection(db, 'Variable Products')
-let 
+const displayConst = document.getElementById("constProductsDisplay")
+const displayVar = document.getElementById("varProductsDisplay")
 getDocs(colRefConst)
 .then((snapshot)=> {
     let products = []
@@ -81,12 +82,6 @@ getDocs(colRefConst)
     console.log(err.message)
 })
 
-
-const querySnapshot = await getDocs(collection(db, "Constant Products"));
-querySnapshot.forEach((doc) => {
-  // doc.data() is never undefined for query doc snapshots
-  console.log(doc.id, " => ", doc.data());
-});
 
 function removeData(collection) {
     let product = document.getElementById("nameInput") 
