@@ -1,12 +1,14 @@
-import {initializeApp} from 'firebase/app' // uriktig adress
+import {initializeApp} from 'firebase/app'
 import {
     getFirestore, collection,getDocs
-}from 'firebase/firestore' //uriktig
+}from 'firebase/firestore'
 import{ 
     getAuth,
     signOut,
     signInWithEmailAndPassword
-}from 'firebase/auth' // fikses
+}from 'firebase/auth'
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyA7hanPcjfkEjcCkAv7DQt1Fis5yinXK4o",
     authDomain: "kaentis.firebaseapp.com",
@@ -27,22 +29,9 @@ const firebaseConfig = {
   const colRef = collection(db, 'Produkter')
 
   // get data
-  getDocs(colRef)
-    .then((snapshot)=> {
-        let products = []
-        snapshot.docs.forEach((doc) =>{
-            products.push({...doc.data(),id :doc.id})
-        })
-        console.log(products)
-    })
-    .catch(err => {
-        console.log(err.message)
-    })
 
     // Sign into 
     const loginForm = document.querySelector('.authForm')
-    const displayWrapper = document.getElementById("displayWrapper")
-    const loginWrapper = document.querySelector(".loginWrapper")
 
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -51,12 +40,7 @@ const firebaseConfig = {
         const password = loginForm.password.value
 
         signInWithEmailAndPassword(auth, email, password)
-        .then((cred)=> {
-            console.log("user logged in", cred.user), enableAdmin();
-        })
-        .catch((err) => {
-            console.log(err.message)
-        })
+        .then(console.log("yes"), enableAdmin())
     })
 
     //Sign out
@@ -73,17 +57,11 @@ const firebaseConfig = {
     })
 
     function enableAdmin() {
-        // console.log("yes")
-        loginWrapper.classList.add("hidden")
-        displayWrapper.classList.remove("hidden")
+        console.log("yes")
+        loginForm.classList.add("hidden")
         console.log(loginForm)
     }
 
     function disableAdmin(){
-        loginWrapper.classList.remove("hidden")
-        displayWrapper.classList.add("hidden")
+        loginForm.classList.remove("hidden")
     }
-
-
-
-console.log("test")

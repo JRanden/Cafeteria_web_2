@@ -2,7 +2,7 @@ console.log("I am here")
 
 import {initializeApp} from 'firebase/app' 
 import {
-    getFirestore, collection,getDocs,doc,setDoc,deleteDoc
+    getFirestore, collection,getDocs,doc,setDoc,deleteDoc,query, where
 }from 'firebase/firestore' 
 
 const firebaseConfig = {
@@ -21,7 +21,7 @@ const firebaseConfig = {
   const db = getFirestore()
   
   // collection ref
-  const colRef = collection(db, 'Produkter')
+  //const colRef = collection(db, 'Produkter')
 
   //Init Variables
   const dropdown = document.getElementById("collectionSelect");
@@ -32,7 +32,7 @@ const firebaseConfig = {
 
   // Event Functions 
   addBtn.addEventListener("click", addData)
-  removeBtn.addEventListener("click",dropdownCheck2)
+  removeBtn.addEventListener("click",removeData)
 
 // function dropdownCheck() {
 //     let selectionValue = dropdown.options[dropdown.selectedIndex].value
@@ -65,7 +65,28 @@ const firebaseConfig = {
   });
 }
 
+// Write out all Data Menu
+const colRefConst = collection(db, 'Constant Products')
+const colRefVar = collection(db, 'Variable Products')
+let 
+getDocs(colRefConst)
+.then((snapshot)=> {
+    let products = []
+    snapshot.docs.forEach((doc) =>{
+        products.push({...doc.data(),id :doc.id})
+    })
+    console.log(products)
+})
+.catch(err => {
+    console.log(err.message)
+})
 
+
+const querySnapshot = await getDocs(collection(db, "Constant Products"));
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data());
+});
 
 function removeData(collection) {
     let product = document.getElementById("nameInput") 

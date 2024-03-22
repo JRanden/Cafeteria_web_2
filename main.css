@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+}
 
 .hidden {
     display:none;
@@ -15,9 +21,57 @@
     
 }
 
+button{
+    color: var(--main-1);
+    padding: 9px 25px;
+    background-color: var(--main-2);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease ease 0s;
+    margin: 5px 5px;
+}
+
+button:hover{
+    background: rgba(4, 168, 191, 0.8);;
+}
+
+li, a, button {
+    font-weight: 500;
+    color: var(--main-1);
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 5%;
+}
+
+#logo{
+    margin-right: auto;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease ease 0s;
+}
+
+.nav_links li a:hover {
+    color: var(--main-2);
+}
+
 
 body{
-    background-color: var(--bg);
     color: var(--main-1);
 
 }
@@ -27,8 +81,9 @@ body{
     max-width: 20%;
     color: var(--main-1);
     font-size: 2em;
-    border: solid var(--main-2) 5px;
+    border: solid var(--main-1) 5px;
     padding: 25px 60px;
+    margin: 0% 0%;
 }
 
 .displayWrapper{
