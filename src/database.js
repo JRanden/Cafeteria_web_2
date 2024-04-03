@@ -21,18 +21,22 @@ const firebaseConfig = {
   const db = getFirestore()
   
   // collection ref
-  //const colRef = collection(db, 'Produkter')
+
 
   //Init Variables
   const dropdown = document.getElementById("collectionSelect");
   let addBtn = document.getElementById("addButton")
   let removeBtn =document.getElementById("removeButton")
-  
-  //dropdown.onchange = dropdownCheck
+
 
   // Event Functions 
-  addBtn.addEventListener("click", addData)
-  removeBtn.addEventListener("click",removeData)
+
+    addBtn.addEventListener("click", addData)
+
+
+
+    removeBtn.addEventListener("click",removeData)
+  
 
 // function dropdownCheck() {
 //     let selectionValue = dropdown.options[dropdown.selectedIndex].value
@@ -51,6 +55,7 @@ const firebaseConfig = {
 // }
 
     function addData() {
+        console("function running")
         let selectionValue = dropdown.options[dropdown.selectedIndex].value
         let product = document.getElementById("nameInput") 
         let price = document.getElementById("priceInput")

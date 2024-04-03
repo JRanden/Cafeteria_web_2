@@ -26,40 +26,32 @@ const firebaseConfig = {
   const auth = getAuth()
   
     // Sign into 
+    const loginButton = document.querySelector('.login')
     const loginForm = document.querySelector('.authForm')
 
     loginForm.addEventListener('submit', (e) => {
-        e.preventDefault()
+        // e.preventDefault()
 
         const email = loginForm.email.value
         const password = loginForm.password.value
 
         signInWithEmailAndPassword(auth, email, password)
-        .then(console.log("yes"), enableAdmin())
+        .then(console.log("Valid"), enableAdmin())
     })
+
+
+
 
     //Sign out
     const logoutButton = document.querySelector('.logout')
-    logoutButton.addEventListener('click', (e) => {
-        signOut(auth)
-        .then(() => {
-            alert("Signed out")
-            disableAdmin()
-        })
-        .catch((err) => {
-            console.log(err.message)
-        })
-    })
+        logoutButton.addEventListener('click',disableAdmin() )
+    
+
 
     function enableAdmin() {
-        console.log("yes")
-        loginForm.classList.add("hidden")
-        console.log(loginForm)
         window.location.href = "adminPage.html";
     }
 
     function disableAdmin(){
-        console.log("hei")
-        window.location.href ="menu.html"
-        alert("logged out")
+        window.location.href ="index.html"
     }
