@@ -65,6 +65,7 @@ const firebaseConfig = {
   });
 }
 
+
 // Write out all Data Menu
 const colRefConst = collection(db, 'Constant Products')
 const colRefVar = collection(db, 'Variable Products')
@@ -77,6 +78,7 @@ getDocs(colRefConst)
         products.push({...doc.data(),id :doc.id})
     })
     console.log(products)
+    displayConst.innerHTML = products
 })
 .catch(err => {
     console.log(err.message)

@@ -3,49 +3,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../main.css">
 </head>
-<body>
-    <header>
-        <h1 id="logo">Kæntis</h1>
-        <nav>
-            <ul class="nav_links">
-                <li><a href="./adminPage.html">Admin Page</a></li>
-                <li><a href="./menu.html">Menu</a></li>
-                <li><a href="./index.html">Home</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="loginWrapper">
-        <form class="authForm">
-            <label for="email">Email</label>
-            <input type="email" name="email">
-            <label for="passowrd">Password</label>
-            <input type="password" name="password">
-            <button class="login">login</button>
-        </form>
-    </div>
-
+<body>    
     <div id="displayWrapper" class="hidden">
-        <label for="choseCollection">Choose Collection:</label>
-            <select name="collectionSelect" id="collectionSelect" >
-                <option value="Constant Products">Constant Menu</option>
-                <option value="Variable Products">Variable Menu</option>
-            </select>
+    <label for="choseCollection">Choose Collection:</label>
+        <select name="collectionSelect" id="collectionSelect" >
+            <option value="Constant Products">Constant Menu</option>
+            <option value="Variable Products">Variable Menu</option>
+        </select>
 
-            <label>Product Name</label> <input type="text" id="nameInput">
-            <label>Price</label> <input type="number" id="priceInput">
-            
-        <button id="addButton">Add</button>
-        <button id="selectButton">Select</button>
-        <button id="updateButton">Update</button>
-        <button id="removeButton">Remove</button>
-    </div>
+        <label>Product Name</label> <input type="text" id="nameInput">
+        <label>Price</label> <input type="number" id="priceInput">
+        
+    <button id="addButton">Add</button>
+    <button id="selectButton">Select</button>
+    <button id="updateButton">Update</button>
+    <button id="removeButton">Remove</button>
+</div>
 
-    <div class="footer">
-    <button class="logout">logout</button>
-    </div>
-<script src="bundle.js"></script>
+<div class="footer">
+<button class="logout">logout</button>
+</div>
+    <script src="./bundle.js"></script>
 </body>
 </html>

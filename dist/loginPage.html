@@ -2,26 +2,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="../main.css">
-    <title>Log In</title>
 </head>
 <body>
     <header>
         <h1 id="logo">Kæntis</h1>
         <nav>
             <ul class="nav_links">
-                <li><a href="./loginPage.html">Admin Login</a></li>
+                <li><a href="./adminPage.html">Admin Page</a></li>
                 <li><a href="./menu.html">Menu</a></li>
                 <li><a href="./index.html">Home</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Register</h1>
-    <div class="nav-bar">
-        <span class="logo-span">
-        <a href="adminPage.html">Admin</a>
-        </span>
+
+    <div class="loginWrapper">
+        <form class="authForm">
+            <label for="email">Email</label>
+            <input type="email" name="email">
+            <label for="passowrd">Password</label>
+            <input type="password" name="password">
+            <button class="login">login</button>
+        </form>
     </div>
-    
+
+<script src="bundle.js" defer></script>
 </body>
 </html>

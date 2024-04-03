@@ -55,8 +55,11 @@ const firebaseConfig = {
         console.log("yes")
         loginForm.classList.add("hidden")
         console.log(loginForm)
+        window.location.href = "adminPage.html";
     }
 
     function disableAdmin(){
-        loginForm.classList.remove("hidden")
+        console.log("hei")
+        window.location.href ="menu.html"
+        alert("logged out")
     }
