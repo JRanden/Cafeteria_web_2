@@ -65,6 +65,7 @@ const firebaseConfig = {
         console.log("Log out")
         loginWrapper.classList.remove("hidden")
         displayWrapper.classList.add("hidden")
+        logoutButton.classList.add("hidden")
 
         
     }

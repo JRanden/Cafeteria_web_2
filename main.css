@@ -2,18 +2,31 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: var(--bg);
 }
 
 .hidden {
     display:none !important;
 }
 
-#bodyHome{
-    background-image: url(.//img/vegetables-set-left-black-slate.jpg);
-    background-size: cover;
+svg{
+z-index: -1;
+margin-left: 40%;
+margin-top: 5%;
+width: 50%;
 }
 
+#imgText {
+    background: none;
+    position: absolute;
+    color:  var(--main-1).08;
+    left: 10%;
+    top: 25%;
+    text-align: center;
+    font-size: 16px;
+    background: none;
+    max-width: 25%;
+    margin: top 10%;
+}
 :root{
     font-family: Arial, Helvetica, sans-serif;
     --bg: #F2F2F2;
@@ -28,13 +41,22 @@
 
 button{
     color: var(--main-1);
-    padding: 9px 25px;
+    padding: 12px 25px;
+    border-radius: 2px;
     background-color: var(--main-2);
     border: none;
-    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease ease 0s;
     margin: 5px 5px;
+}
+.secondaryButton{
+    background: none;
+    border: var(--main-2) solid 2px;
+    color: var(--main-1);
+}
+#secondaryButton:hover{
+    background: var(--bg);
+    border: var(--main-2) solid 3px;
 }
 
 button:hover{
@@ -43,15 +65,21 @@ button:hover{
 
 li, a, button {
     font-weight: 500;
-    color: var(--main-1);
+    color: var(--bg);
     text-decoration: none;
 }
+
+.navBar {
+    background-color: var(--main-1);
+}
+
 
 header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 30px 5%;
+    color: var(--bg);
 }
 
 #logo{
@@ -65,6 +93,8 @@ header{
 .nav_links li {
     display: inline-block;
     padding: 0px 20px;
+    color: var(--bg);
+    background-color: transparent;
 }
 
 .nav_links li a {
@@ -95,9 +125,47 @@ body{
     color: var(--main-1);
 }
 
-div .productDisplay{
+#footer{
+    position: sticky;
+    bottom: 0;
+    background-color: var(--main-1);
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    color: var(--bg);
+}
+#footer p{
+   margin: 10px 10px;
+}
+#footer a{
+    text-decoration: underline;
+ }
+
+ .loginWrapper{
+    position: absolute;
+    top: 25%;
+    left: 42%;
+    margin: -25px 0 0 -25px;
+ }
+ 
+ #constProductsDisplay{
+     display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    justify-content: space-evenly;
+    
+ }
+
+ .productDisplayConst{
     margin: 10px 10px;
     max-width: 10%;
     border: 1px solid var(--main-2);
-    padding: 20px;
+    padding-right: 50%;
 }
+
+#constProductsDisplay h2{
+ color: var(--main-1);
+ padding:50px 5px 5px 50px;
+ width: 200px;
+ margin: 50% 50%;
+}
+

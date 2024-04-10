@@ -34,10 +34,32 @@ getDocs(colRefConst)
     let count = 1;
     for (let i = 0; i < products.length; i++ ) {
         let inputDiv = document.createElement("div")
-        inputDiv.classList.add("productDisplay")
+        inputDiv.classList.add("productDisplayConst")
 
-        inputDiv.innerHTML = `${products[i].name} ${products[i].price} Kr`
+        inputDiv.innerHTML = `<h2>${products[i].name} <br> Price: ${products[i].price} Kr/<h2>`
         displayConst.appendChild(inputDiv)
+
+    }
+    
+})
+.catch(err => {
+    console.log(err.message)
+})
+
+getDocs(colRefVar)
+.then((snapshot)=> {
+    let products = []
+    snapshot.docs.forEach((doc) =>{
+        products.push({...doc.data(),id :doc.id})
+    })
+    console.log(products)
+    let count = 1;
+    for (let i = 0; i < products.length; i++ ) {
+        let inputDiv = document.createElement("div")
+        inputDiv.classList.add("productDisplayVar")
+
+        inputDiv.innerHTML = `${products[i].name} <br> Price: ${products[i].price} Kr`
+        displayVar.appendChild(inputDiv)
 
     }
     

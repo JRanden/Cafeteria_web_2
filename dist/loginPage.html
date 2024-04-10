@@ -4,18 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../loginPage.css">
 </head>
 <body>
-    <header>
+    <header class="navBar">
         <h1 id="logo">Kæntis</h1>
         <nav>
             <ul class="nav_links">
-                <li><a href="./loginPage.html">Admin Page</a></li>
+                <li><a href="./loginPage.html">Admin Login</a></li>
                 <li><a href="./menu.html">Menu</a></li>
                 <li><a href="./index.html">Home</a></li>
             </ul>
         </nav>
     </header>
+    <div id="parentWrapper">
     <p>Mail: kantine@kaentis.admin</p>
     <p>Password: Admin123</p>
     <div class="loginWrapper">
@@ -45,10 +47,13 @@
     <button id="updateButton">Update</button>
     <button id="removeButton">Remove</button>
 </div> 
+<button class="logoutBtn hidden">log Out</button>
+</div>
 
 <div id="footer">
-    <button class="logoutBtn hidden">log Out</button>
     Made by Jonathan Randen
+    <p><a href="https://github.com/JRanden">Github</a></p>
+    <p><a href="https://www.linkedin.com/in/jonathan-randen-4453a726a/">LinkedIn</a></p>
 </div>
 
 <script src="./loginPage.bundle.js"></script>
