@@ -3,11 +3,13 @@ const path = require('path')
 module.exports = {
     mode: 'development',
     entry: {
-        src:['./src/index.js','./src/database.js']
+        loginPage: path.join(__dirname, 'src','loginPage.js'),
+        menuPage: path.join(__dirname, 'src','menuPage.js')
+        // src:['./src/loginPage.js','./src/database.js']
         },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: '[name].bundle.js'
     },
     watch: true
 }

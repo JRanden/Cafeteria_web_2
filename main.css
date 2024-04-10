@@ -6,7 +6,12 @@
 }
 
 .hidden {
-    display:none;
+    display:none !important;
+}
+
+#bodyHome{
+    background-image: url(.//img/vegetables-set-left-black-slate.jpg);
+    background-size: cover;
 }
 
 :root{
@@ -88,4 +93,11 @@ body{
 
 .displayWrapper{
     color: var(--main-1);
+}
+
+div .productDisplay{
+    margin: 10px 10px;
+    max-width: 10%;
+    border: 1px solid var(--main-2);
+    padding: 20px;
 }

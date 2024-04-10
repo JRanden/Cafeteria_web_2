@@ -10,7 +10,7 @@
         <h1 id="logo">Kæntis</h1>
         <nav>
             <ul class="nav_links">
-                <li><a href="./adminPage.html">Admin Page</a></li>
+                <li><a href="./loginPage.html">Admin Page</a></li>
                 <li><a href="./menu.html">Menu</a></li>
                 <li><a href="./index.html">Home</a></li>
             </ul>
@@ -27,6 +27,30 @@
             <button class="login">login</button>
         </form>
     </div>
-    <script async src="bundle.js"></script>
+
+
+
+<div id="displayWrapper" class="hidden">
+    <label for="choseCollection">Choose Collection:</label>
+        <select name="collectionSelect" id="collectionSelect" >
+            <option value="Constant Products">Constant Menu</option>
+            <option value="Variable Products">Variable Menu</option>
+        </select>
+
+        <label>Product Name</label> <input type="text" id="nameInput">
+        <label>Price</label> <input type="number" id="priceInput">
+        
+    <button id="addButton">Add</button>
+    <button id="selectButton">Select</button>
+    <button id="updateButton">Update</button>
+    <button id="removeButton">Remove</button>
+</div> 
+
+<div id="footer">
+    <button class="logoutBtn hidden">log Out</button>
+    Made by Jonathan Randen
+</div>
+
+<script src="./loginPage.bundle.js"></script>
 </body>
 </html>

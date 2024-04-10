@@ -1,4 +1,4 @@
-console.log("I am here")
+
 
 import {initializeApp} from 'firebase/app' 
 import {
@@ -22,78 +22,4 @@ const firebaseConfig = {
   
   // collection ref
 
-
-  //Init Variables
-  const dropdown = document.getElementById("collectionSelect");
-  let addBtn = document.getElementById("addButton")
-  let removeBtn =document.getElementById("removeButton")
-
-
-  // Event Functions 
-
-    addBtn.addEventListener("click", addData)
-
-
-
-    removeBtn.addEventListener("click",removeData)
-  
-
-// function dropdownCheck() {
-//     let selectionValue = dropdown.options[dropdown.selectedIndex].value
-
-//     if (selectionValue === "selectCollection") {
-//         alert("Please select a Collection");
-//     }
-//     else if (selectionValue == "constant") {
-//         console.log("Constant")
-//         addData("Constant Products")
-//     }
-//     else if (selectionValue == "variable") {
-//         console.log("Variable")
-//         addData("Variable Products")
-//     }
-// }
-
-    function addData() {
-        console("function running")
-        let selectionValue = dropdown.options[dropdown.selectedIndex].value
-        let product = document.getElementById("nameInput") 
-        let price = document.getElementById("priceInput")
-
-
-        console.log(product.value)
-        console.log(price.value);
-        console.log(id.value);
-    setDoc(doc(db, selectionValue, product.value), {
-    name: product.value,
-    price: price.value,
-  });
-}
-
-
-// Write out all Data Menu
-const colRefConst = collection(db, 'Constant Products')
-const colRefVar = collection(db, 'Variable Products')
-const displayConst = document.getElementById("constProductsDisplay")
-const displayVar = document.getElementById("varProductsDisplay")
-getDocs(colRefConst)
-.then((snapshot)=> {
-    let products = []
-    snapshot.docs.forEach((doc) =>{
-        products.push({...doc.data(),id :doc.id})
-    })
-    console.log(products)
-    displayConst.innerHTML = products
-})
-.catch(err => {
-    console.log(err.message)
-})
-
-
-function removeData(collection) {
-    let product = document.getElementById("nameInput") 
-
-
-    deleteDoc(doc(db, collection, product.value));
-}
 
