@@ -11,6 +11,7 @@ Other sites used: https://developer.mozilla.org/en-US/
                   https://www.shecodes.io/athena/
                   https://codedamn.com/
                   https://stackoverflow.com/
+                  https://webpack.js.org/
 
 First u will be greeted by a home page where you can choose to see the menu or login as admin you can navigate back and forth from all sites using the navigation bar at the top of the screen. 
 
