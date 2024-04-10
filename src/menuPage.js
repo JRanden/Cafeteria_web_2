@@ -36,7 +36,7 @@ getDocs(colRefConst)
         let inputDiv = document.createElement("div")
         inputDiv.classList.add("productDisplayConst")
 
-        inputDiv.innerHTML = `<h2>${products[i].name} <br> Price: ${products[i].price} Kr/<h2>`
+        inputDiv.innerHTML = `<h2>${products[i].name} <br> Price: ${products[i].price} Kr <h2>`
         displayConst.appendChild(inputDiv)
 
     }
@@ -58,7 +58,7 @@ getDocs(colRefVar)
         let inputDiv = document.createElement("div")
         inputDiv.classList.add("productDisplayVar")
 
-        inputDiv.innerHTML = `${products[i].name} <br> Price: ${products[i].price} Kr`
+        inputDiv.innerHTML = `<h2>${products[i].name} <br> Price: ${products[i].price} Kr <h2>`
         displayVar.appendChild(inputDiv)
 
     }

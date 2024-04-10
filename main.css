@@ -126,7 +126,7 @@ body{
 }
 
 #footer{
-    position: sticky;
+    position: absolute;
     bottom: 0;
     background-color: var(--main-1);
     width: 100%;
@@ -163,6 +163,28 @@ body{
 }
 
 #constProductsDisplay h2{
+ color: var(--main-1);
+ padding:50px 5px 5px 50px;
+ width: 200px;
+ margin: 50% 50%;
+}
+
+
+ #varProductsDisplay{
+     display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    justify-content: space-evenly;
+    
+ }
+
+ .productDisplayVar{
+    margin: 10px 10px;
+    max-width: 10%;
+    border: 1px solid var(--main-2);
+    padding-right: 50%;
+}
+
+#varProductsDisplay h2{
  color: var(--main-1);
  padding:50px 5px 5px 50px;
  width: 200px;
