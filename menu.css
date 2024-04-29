@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    color: var(--main-1);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display:none !important;
+}
+
+svg{
+z-index: -1;
+margin-left: 40%;
+margin-top: 5%;
+width: 50%;
+}
+
+#imgText {
+    background: none;
+    position: absolute;
+    color:  var(--main-1).08;
+    left: 10%;
+    top: 25%;
+    text-align: center;
+    font-size: 16px;
+    background: none;
+    max-width: 25%;
+    margin: top 10%;
+}
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    --bg: #F2F2F2;
+    --main-1: #0D1931;
+    --main-2: #04A8BF;
+    --yellow: #FFB200;
+    --red: #ff0000;
+    --green: #19D600;
+    --greytone: #474747;
+    
+}
+
+
+
+li, a, button {
+    font-weight: 500;
+    color: var(--bg);
+    text-decoration: none;
+}
+
+.navBar {
+    background-color: var(--main-1);
+}
+
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 5%;
+    color: var(--bg);
+}
+
+#logo{
+    margin-right: auto;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+    color: var(--bg);
+    background-color: transparent;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease ease 0s;
+}
+
+.nav_links li a:hover {
+    color: var(--main-2);
+}
+
+
+#footer{
+    background-color: var(--main-1);
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    color: var(--bg);
+}
+#footer p{
+   margin: 10px 10px;
+}
+#footer a{
+    text-decoration: underline;
+ }
+
+ #constProductsDisplay{
+    display: grid;
+   grid-template-columns: repeat(3,1fr) ;
+   justify-content: space-evenly;
+   
+}
+
+.productDisplayConst{
+   margin: 10px 10px;
+   max-width: 10%;
+   border: 1px solid var(--main-2);
+   padding-right: 50%;
+}
+
+#constProductsDisplay h2{
+color: var(--main-1);
+padding:50px 5px 5px 50px;
+width: 200px;
+margin: 50% 50%;
+}
+
+
+#varProductsDisplay{
+    display: grid;
+   grid-template-columns: repeat(3,1fr) ;
+   justify-content: space-evenly;
+   
+}
+
+.productDisplayVar{
+   margin: 10px 10px;
+   max-width: 10%;
+   border: 1px solid var(--main-2);
+   padding-right: 50%;
+}
+
+#varProductsDisplay h2{
+color: var(--main-1);
+padding:50px 5px 5px 50px;
+width: 200px;
+margin: 50% 50%;
+}
